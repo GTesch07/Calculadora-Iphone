@@ -1,0 +1,124 @@
+:root {
+    --cor-primaria: #000000;
+    --cor-secundaria: #F69906;
+    --cor-terciaria: #313131;
+    --cor-quaternaria: #9F9F9F;
+    --cor-quinternaria: #FFFFFF;
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Helvetica;
+}
+
+
+body {
+    background-color: var(--cor-primaria);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 3em;
+}
+
+#calc {
+    width: 400px;
+    padding: 0.5em;
+    background-color: var(--cor-primaria);
+    color: var(--cor-primaria);
+    display: flex;
+    flex-direction: column;
+
+}
+
+#calc h3 {
+    font-size: 0.8em;
+    font-weight: 300;
+}
+
+#operations {
+    text-align: right;
+}
+
+#previous-operations {
+    color: var(--cor-quinternaria);
+    padding: 0.2em;
+    overflow-wrap: break-word;
+    min-height: 1.6em;
+}
+
+#current-operations {
+    min-height: 1.6em;
+    color: var(--cor-quinternaria);
+    font-size: 3em;
+    font-weight: 700;
+    padding: 0.2em;
+    overflow-wrap: break-word;
+}
+
+#buttons-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 10px;
+}
+
+/* 1.2em */
+#buttons-container button {
+    border: 1px solid transparent;
+    border-radius: 50px;
+    height: 4.5em;
+    font-size: 1.2em;
+    background-color: var(--cor-quaternaria);
+    cursor: pointer;
+
+}
+
+#buttons-container button:hover {
+    background-color: #C5C5C5;
+}
+
+#buttons-container .numberOperation {
+    background-color: var(--cor-secundaria);
+    color: var(--cor-quinternaria);
+
+}
+
+#buttons-container .numberOperation:hover {
+    background-color: var(--cor-quinternaria);
+    color: var(--cor-secundaria);
+}
+
+#buttons-container .number {
+    background-color: var(--cor-terciaria);
+    color: var(--cor-quinternaria);
+}
+
+
+#buttons-container .number:hover {
+    background-color: #696969;
+}
+
+#buttons-container .number0 {
+    grid-column: span 2;
+    background-color: var(--cor-terciaria);
+    color: var(--cor-quinternaria);
+    text-align: left;
+    padding-left: 39px;
+}
+
+#buttons-container .number0:hover {
+    background-color: #696969;
+}
+
+
+#buttons-container #equal-btn {
+    background-color: var(--cor-secundaria);
+    color: var(--cor-quinternaria);
+}
+
+#buttons-container #equal-btn:hover {
+    background-color: #FCD28E;
+
+}
